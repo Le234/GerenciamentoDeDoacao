@@ -87,11 +87,11 @@
             <thead>
                 <tr class="w3-black">
                     <th>ID</th>
-                    <th>Doador</th>
+                    <th>Usuário</th>
                     <th>Descrição</th>
                     <th>Quantidade</th>
                     <th>Tamanho</th>
-                    <th>Status</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -110,10 +110,7 @@
                                 <td>{$linha['quantidade']}</td>
                                 <td>{$linha['tamanho']}</td>
                                 <td>
-                                    <a href='aberta.php?id={$linha['id']}' class='w3-button w3-green'>Aberta</a>
-                                    <a href='pendente.php?id={$linha['id']}' class='w3-button w3-yellow'>Pendente</a>
-                                    <a href='concluida.php?id={$linha['id']}' class='w3-button w3-red'>Concluída</a>
-                                </td>
+                                    <a href='obter_doacao.php?id={$linha['id']}' class='w3-button w3-green'>obter doacao</a>
                               </tr>";
                     }
                 } else {
