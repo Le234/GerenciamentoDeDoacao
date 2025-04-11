@@ -1,66 +1,25 @@
-<?php
-include 'conexao.php';
+<?php require_once ('verificarAcesso.php'); ?>
+<?php require_once ('cabecalho.php'); ?>
+<?php require_once ('conexao.php'); ?>  
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $sql = "DELETE FROM usuarios WHERE id = $id";
-    if ($conexao->query($sql) === TRUE) {
-        header("Location: index.php?msg=Registro excluído com sucesso!");
-    }
-    else {
-        header("Location: index.php?msg=Erro ao excluir o registro.");
-    }
-}else {
-    header("Location: index.php");
-    }
-?>
-<?php
+<a href="principal.php" class="w3-display-topmiddle w3-red w3-center w3-padding w3-button" style="text-decoration:none; ">
+    <i class="fa fa-ban" style="font-size:5em"></i>
+    <p style="font-weight:bold;">CANCELAR EXCLUSÃO</p>     
+</a> 
+<div class="w3-padding w3-content w3-text-grey w3-third w3-margin w3-display-middle">
+    <h1 class="w3-center w3-teal w3-round-large w3-margin">EXLUIR - ID: <?php echo " ".$_GET['id_usuario']?> </h1>
 
-include 'conexao.php';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id = $_POST['id'];
-    $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
-    $cnpj = $_POST['cnpj'];
-
-    $sql = "UPDATE usuarios SET nome = '$nome', cpf = '$cpf', cnpj = '$cnpj' WHERE id = $id";
-    if ($conexao->query($sql) === TRUE) {
-        header("Location: index.php?msg=Registro atualizado com sucesso!");
-    } else {
-        echo "Erro ao atualizar: " . $conexao->error;
-    }
-}
-
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $sql = "SELECT * FROM usuarios WHERE id = $id";
-    $resultado = $conexao->query($sql);
-    $usuario = $resultado->fetch_assoc();
-}
-?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Usuário</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
-<body>
-<div class="w3-container w3-margin-top">
-    <h2>Editar Usuário</h2>
-    <form class="w3-container" method="POST">
-        <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
-        <label>Nome</label>
-        <input class="w3-input w3-border" type="text" name="nome" value="<?php echo $usuario['nome']; ?>" required>
-        <label>CPF</label>
-        <input class="w3-input w3-border" type="text" name="cpf" value="<?php echo $usuario['cpf']; ?>" required>
-        <label>CNPJ</label>
-        <input class="w3-input w3-border" type="text" name="creci" value="<?php echo $usuario['cnpj']; ?>" required>
-        <button class="w3-button w3-teal w3-margin-top" type="submit">Salvar</button>
-    </form>
+    <form action="excluirAction.php" class="w3-container w" method='post'>
+        <input name="id_usuario" class="w3-input w3-grey w3-border" type="hidden" value="<?php echo $_GET['id_usuario']?>">
+    
+        <button name="btnExcuir" class="w3-button w3-teal w3-cell w3-round-large w3-right">     
+            <i class="w3-xxlarge fa fa-check"></i> Confirmar Exclusão.</button>
+        </form>
 </div>
-</body>
-</html>
+
+
+<?php require_once ('rodape.php'); 
+
+
+
+    

@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Doações</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
-<body>
+<?php require_once ('verificarAcesso.php'); ?>
+<?php require_once ('cabecalho.php'); ?>
+<?php require_once ('conexao.php'); ?>
+
     <div class="w3-container w3-margin-top">
         <h2 class="w3-center">Cadastro de Doação</h2>
 
@@ -91,7 +86,7 @@
                     <th>Descrição</th>
                     <th>Quantidade</th>
                     <th>Tamanho</th>
-                    <th>Ações</th>
+                    <th>Ações</th> 
                 </tr>
             </thead>
             <tbody>
@@ -104,7 +99,7 @@
                 if ($stmt->num_rows > 0) {
                     while ($linha = $stmt->fetch_assoc()) {
                         echo "<tr>
-                                <td>{$linha['id']}</td>
+                                <td>{$linha['id_doacoes']}</td>
                                 <td>{$linha['id_usuario']}</td>
                                 <td>{$linha['descricao']}</td>
                                 <td>{$linha['quantidade']}</td>
@@ -120,5 +115,4 @@
             </tbody>
         </table>
     </div>
-</body>
-</html>
+<?php require_once ('rodape.php'); ?>
