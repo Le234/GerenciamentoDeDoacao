@@ -27,7 +27,7 @@
         if ($conexao->query($sql) === TRUE) {
             echo '
             <a href="listar.php">
-                <h1 class="w3-button w3-teal">Cadastro atualizado com sucesso! </h1>
+                <h1 class="w3-button w3-black">Cadastro atualizado com sucesso! </h1>
             </a> 
             ';
         $id = mysqli_insert_id($conexao);
@@ -35,7 +35,7 @@
         } else {
             echo '
             <a href="listar.php">
-                <h1 class="w3-button w3-teal">ERRO! </h1>
+                <h1 class="w3-button w3-black">ERRO! </h1>
             </a> 
             ';
         }

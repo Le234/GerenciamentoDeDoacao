@@ -8,11 +8,11 @@
         $sql = "DELETE FROM usuarios WHERE id_usuario = '".$_POST['id_usuario'] ."';";
         if ($conexao->query($sql) === TRUE)
         {
-            echo '<a href="listar.php"><h1 class="w3-button w3-teal"> Excluido com sucesso! </h1></a> ';
+            echo '<a href="listar.php"><h1 class="w3-button w3-center w3-black"> Excluido com sucesso! </h1></a> ';
         } 
         else 
         {
-            echo '<a href="listar.php"><h1 class="w3-button w3-teal">ERRO! </h1></a> ';
+            echo '<a href="listar.php"><h1 class="w3-button w3-center w3-black">ERRO! </h1></a> ';
         }
         $conexao->close();
     ?>

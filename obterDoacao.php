@@ -4,7 +4,7 @@
 
 
 
-<div class="w3-container w3-margin-top">
+<div class="w3-container w3-center w3-margin-top">
     
 <?php
 // Verifica se o parâmetro id_doacoes foi enviado via GET
@@ -41,12 +41,12 @@ if (isset($_GET['id_doacoes'])) {
 <h2>Solicitar Doação</h2>
 <form class="w3-container" method="POST" action="donatario.php">
 
-     <input type="hidden" name="id_doacoes" value="<?php echo htmlspecialchars($id_doacoes); ?>">
+    <input type="hidden" name="id_doacoes" value="<?php echo htmlspecialchars($id_doacoes); ?>">
     <input  type="hidden" name="descricao" value="<?php echo $doacao['descricao']; ?>">
     <input  type="hidden" name="quantidade" value="<?php echo $doacao['quantidade']; ?>">
     <input  type="hidden" name="tamanho" value="<?php echo $doacao['tamanho']; ?>">
     
-    <button class="w3-button w3-teal w3-margin-top" type="submit">Salvar</button>
+    <button class="w3-button w3-black w3-center w3-margin-top" type="submit">Salvar</button>
 
 </form>
 

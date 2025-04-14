@@ -2,8 +2,8 @@
 <?php require_once ('cabecalho.php'); ?>
 <?php require_once ('conexao.php'); ?>
 
-    <div class="w3-container w3-margin-top">
-        <h2 class="w3-center">Cadastro de Doação</h2>
+<div class="w3-container w3-margin-top">
+   <h2 class="w3-center">Cadastrar Doação</h2>
 
         <?php
         // Incluindo o arquivo de conexão
@@ -58,6 +58,7 @@
             </div>
         <?php endif; ?>
 
+
         <form class="w3-container w3-card w3-padding" method="POST">
             
             <label>Usuario</label>
@@ -71,12 +72,17 @@
 
             <label>Tamanho</label>
             <input class="w3-input w3-border" type="text" name="tamanho" required>
-
-            <button class="w3-button w3-black w3-margin-top" type="submit">Cadastrar Doação</button>
         </form>
-    </div>
+    
+<div class="w3-display-container w3-center w3-margin-top">
+    
+        <button class="w3-button w3-black" type="submit">Salvar</button>
+    
+</div>
+</div>
 
-    <div class="w3-container w3-margin-top">
+
+<div class="w3-container w3-margin-top">
         <h2 class="w3-center">Lista de Doações</h2>
         <table class="w3-table-all">
             <thead>

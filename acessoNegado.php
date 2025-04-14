@@ -4,9 +4,9 @@
     <?php
             echo '
             <a href="index.php">
-                <h1 class="w3-button w3-teal">Acesso NEGADO! </h1>
+                <h1 class="w3-button w3-black">Acesso NEGADO! </h1>
                 <br>
-                <h2 class="w3-button w3-teal">É necessária a Realização do Login Inválido! </h2>
+                <h2 class="w3-button w3-black">É necessária a Realização do Login Inválido! </h2>
             </a> 
             ';
     ?>

@@ -45,7 +45,7 @@
                     if ($status === 'pendente') {
                         echo "<a href='obterDoacao.php?id_doacoes={$id_doacoes}' class='w3-button w3-green'>Obter Doação</a>";
                     } else {
-                        echo "<button class='w3-button w3-gray' disabled>Doação Concluída</button>";
+                        echo "<button class='w3-button w3-red' disabled>Doação Concluída</button>";
                     }
 
                     echo "</td>

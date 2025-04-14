@@ -1,7 +1,7 @@
 <?php require_once ('verificarAcesso.php'); ?>
 <?php require_once ('cabecalho.php'); ?>
 
-<div class="w3-container w3-margin-top">
+<div class="w3-container w3-center w3-margin-top">
     <h2>Editar Usuários</h2>
     <form class="w3-container" method="POST">
         <input type="hidden" name="id_usuario" value="<?php echo $usuario['id_usuario']; ?>">
@@ -29,7 +29,7 @@
         <input class="w3-input w3-border" type="text" name="telefoneFixo" value="<?php echo $usuario['telefoneFixo']; ?>" required>
         <label>CEP</label>
         <input class="w3-input w3-border" type="text" name="cep" value="<?php echo $usuario['cep']; ?>" required>
-        <button class="w3-button w3-teal w3-margin-top" type="submit">Salvar</button>
+        <button class="w3-button w3-black w3-center w3-margin-top" type="submit">Salvar</button>
     </form>
 </div>       
 <?php require_once ('rodape.php'); ?>

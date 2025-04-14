@@ -34,7 +34,7 @@
         <label>CEP</label>
         <input class="w3-input w3-border" type="text" name="cep" required>
         
-        <button class="w3-button w3-black w3-margin-top" type="submit">Enviar</button>
+        <button class="w3-button w3-black w3-center w3-margin-top" type="submit">Enviar</button>
     </form>
 </div>
 

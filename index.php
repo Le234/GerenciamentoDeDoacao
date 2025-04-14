@@ -4,7 +4,7 @@
 
         <div class="w3-center">
             <br>
-            <img src="img/gabi.jpg" alt="Gabi" style="width:40%" class="w3-circle w3-margin-top">
+            <img src="img/logoDoacao.png" alt="Doacao" style="width:40%" class="w3-circle w3-margin-top">
         </div>
 
         <form class="w3-container " action="loginAction.php" method="post">

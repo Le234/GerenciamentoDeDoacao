@@ -61,5 +61,6 @@ if ($resultado->num_rows === 1)
     }
 ?>
 <br>
-<a href="listaDoacoes.php">Voltar</a>
+<a href="listaDoacoes.php"class="w3-button w3-black w3-center w3-margin-top">Voltar</a> 
+    
 <?php require_once ('rodape.php'); ?>
