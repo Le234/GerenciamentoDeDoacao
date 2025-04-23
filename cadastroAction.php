@@ -2,7 +2,7 @@
 <?php require_once ('cabecalho.php'); ?>
 
 
-<div class="w3-padding w3-content w3-center w3-text-grey w3-third w3-display-middle">
+<div class="w3-padding w3-content w3-center w3-text-grey w3-third w3-display-middle"> 
     <?php
         require_once 'conexao.php';
         $sql = "INSERT INTO usuarios (nome, cpf, cnpj, email, senha, cidade, bairro, logradouro, numero, telefoneCelular, telefoneFixo, cep)
@@ -20,4 +20,5 @@
         $conexao->close();
     ?>
 </div>
+ 
 <?php require_once ('rodape.php'); ?>
